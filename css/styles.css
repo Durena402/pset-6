@@ -22,11 +22,11 @@ button:hover {
 #input-to-list {
   border: 5px dashed  #D9FFF8;
   background-color: #F7F2E6;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
   width: 40%;
   margin-top: 5%;
+  height: 100px;
 }
 #add{
   border: 5px solid #D9FFF8;
@@ -35,7 +35,54 @@ button:hover {
   color: black;
   font-size: 30px;
   padding: 10px 20px;
-  margin-left: 70%;
+  width: 100px;
+  height: 60px;
+  position: fixed;
+  left: 1250px;
+  margin-top: 1.15%;
+}
+input {
+  border: 5px solid #D9FFF8;
+  background-color: #F4C6DB;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  padding: 10px 20px;
+  position: fixed;
+  left: 700px;
+  width:450px;
+  height: 20px;
+  margin-top: 1.3%;
+}
+.list {
+  border: 5px dashed  #D9FFF8;
+  background-color: #F7F2E6;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
   margin-top: 3%;
-  margin-bottom: 3%;
+  height: auto;
+}
+.list-title {
+  border: 3px solid black;
+  background-color: #D9FFF8;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  width: 400px;
+  text-align: center;
+  font-size: 40px;
+}
+ul li {
+  border: 3px solid black;
+  background-color: #D9FFF8;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  width: 1000px;
+  text-align: left;
+  font-size: 30px;
+ list-style: none;
+ margin-bottom: 1%;
+ padding-left: 10px;
 }
