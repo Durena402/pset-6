@@ -1,10 +1,9 @@
 * {
     margin: 0;
-    padding: 2;
+    padding: 0;
 }
 .header {
   background-color: #D9FFF8 ;
-  font: "Serif";
   text-align: center;
   color: #11100F;
   font-size: 75px;
@@ -15,18 +14,14 @@ body{
   background-color: #E8E1EF;
 }
 
-button:hover {
-  box-shadow: 0.3em 0.3em 0.3em #777777;
-}
-
-#input-to-list {
+#input-box {
   border: 5px dashed  #D9FFF8;
   background-color: #F7F2E6;
   margin-left: auto;
   margin-right: auto;
   width: 40%;
   margin-top: 5%;
-  height: 100px;
+  margin bottom: 5%;
 }
 #add{
   border: 5px solid #D9FFF8;
@@ -36,22 +31,30 @@ button:hover {
   font-size: 30px;
   padding: 10px 20px;
   width: 15%;
-  height: 60px;
-  margin-left: 80%;
+  height: 60%;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
-  margin-top:1%;
+  margin-top:3%;
+  margin-bottom: 3%;
 }
-input {
+button:hover {
+  box-shadow: 0.3em 0.3em 0.3em #777777;
+}
+#textBox {
   border: 5px solid #D9FFF8;
   background-color: #F4C6DB;
   text-align: center;
   color: black;
   font-size: 30px;
   padding: 10px 20px;
-  margin-left: 15%;
-  width:50%;
-  height: 20px;
-  margin-top: 3.5%;
+  width:60%;
+  height: 50%;
+  position: relative;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .list {
   border: 5px dashed  #D9FFF8;
@@ -90,26 +93,44 @@ ul li:hover {
 .priority {
   font-size: 50px;
   position:relative;
-  margin-left: 2%;
   margin-top: 3%;
+  margin-bottom: auto;
+  margin-left: 2%;
+  margin-right: auto;
+}
+.priority:hover{
+  color: blue;
 }
 .item{
-  text-align: center;
-  color: black;
   font-size: 40px;
-  position: relative;
-  margin-top: -10px;
-}
-.completed{
-  font-size: 50px;
-  position: relative;
-  margin-left: 85%;
-  margin-top: -20px;
+  text-align: center;
+  position:relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  margin-left: 2%;
+  margin-right: auto;
+  padding: 0 630px 0 0;
 }
 
+.completed{
+  font-size: 50px;
+  position:relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  margin-left: 2%;
+  margin-right: auto;
+}
+.completed:hover{
+ color: green;
+}
 .remove {
   font-size: 50px;
-  position: relative;
-  margin-left: 93%;
-  margin-top: -80px;
+  position:relative;
+  margin-top: 3%;
+  margin-bottom: auto;
+  margin-left: 2%;
+  margin-right: auto;
+}
+.remove:hover{
+  color: red;
 }
