@@ -1,4 +1,18 @@
 window.onload = function() {
+    document.getElementById("add").onclick = addItemToDo;
+};
+const items = [];
 
-  this.document.getElementById("add").onclick = addToArray;
-}
+const addItemToDo= function() {
+  const text = document.getElementById("textbox").value;
+
+  items.push({
+    priority: "low",
+    complete: false,
+    content: text
+  });
+
+  document.getElementById("theInput").value = "";
+
+  renderItems();
+};
