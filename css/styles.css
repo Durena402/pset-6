@@ -91,45 +91,41 @@ ul li:hover {
   background: #F4C6DB;
 }
 .priority {
+  width: 5%;
   font-size: 50px;
-  position:relative;
-  margin-top: 3%;
-  margin-bottom: auto;
-  margin-left: 2%;
-  margin-right: auto;
+  margin: auto;
+  padding: 10px;
 }
 .priority:hover{
   color: blue;
 }
 .item{
+  width: 45%;
   font-size: 40px;
   text-align: center;
-  position:relative;
-  margin-top: 3%;
+  position: absolute;
+  margin-top: auto;
   margin-bottom: auto;
-  margin-left: 2%;
+  margin-left: auto;
   margin-right: auto;
-  padding: 0 65% 0 0;
 }
 
 .completed{
+  width: 5%;
   font-size: 50px;
-  position:relative;
-  margin-top: 3%;
-  margin-bottom: auto;
-  margin-left: 2%;
-  margin-right: auto;
+  position: absolute;
+  margin: auto;
+  right: 25%;
 }
 .completed:hover{
  color: green;
 }
 .remove {
+  width: 5%;
   font-size: 50px;
-  position:relative;
-  margin-top: 3%;
-  margin-bottom: auto;
-  margin-left: 2%;
-  margin-right: auto;
+  position: absolute;
+  margin: auto;
+  right: 21%;
 }
 .remove:hover{
   color: red;
