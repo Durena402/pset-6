@@ -20,17 +20,18 @@ window.onload = function() {
   renderItems();
  };
 
- const prioritize = function() {
+ const prioritizeItem = function() {
    // find item in array
-   console.log(items[this.id]);
    if (items[this.id].priority === "low") {
      items[this.id].priority = "high";
-     // move to top
+     const item = items.splice(this.id, 1);
+     items.unshift(item[0]);
    } else {
      items[this.id].priority = "low";
-     // move to bottom
+     const item = items.splice(this.id, 1);
+     items.push(item);
    }
-   console.log(items[this.id]);
+  renderItems();
  }
 
 
@@ -58,13 +59,13 @@ const renderItems = function (){
           span3.id = i;
           span3.className = "completed";
           span3.innerHTML = "&#10004";
-          //span3.onclick = completeItem;
+          //span3.onclick = completeItem();
 
           const span4 = document.createElement("span");
           span4.id = i;
           span4.className = "remove";
           span4.innerHTML = "&#10008";
-          //span4.onclick = removeItem;
+          //span4.onclick = removeItem();
 
         div.append(span1);
         div.append(span2);
