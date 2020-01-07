@@ -76,11 +76,11 @@ button:hover {
   font-size: 40px;
 }
 
-ul li {
+ul {
   border: 3px solid black;
   background-color: #D9FFF8;
   width: 90%;
-  height: 75px;
+  /*height: 75px;*/
  list-style: none;
  margin-bottom: 2%;
  margin-top: 2%;
