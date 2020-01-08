@@ -49,12 +49,11 @@ const removeItem = function() {
 const completeItem = function() {
   if (items[this.id].complete === false) {
     items[this.id].complete = true;
-    //const item = items.splice(this.id, 1);
-    //items.unshift(item[0]);
+let text = document.getElementById("item")
+    text.style.setProperty("text-decoration", "line-through")
   } else {
     items[this.id].priority = false;
-    //  const item = items.splice(this.id, 1);
-      //items.push(item[0]);
+
   }
 
   renderItems();
