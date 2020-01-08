@@ -49,11 +49,9 @@ const removeItem = function() {
 const completeItem = function() {
   if (items[this.id].complete === false) {
     items[this.id].complete = true;
-    console.log("true")
 
   } else {
     items[this.id].complete = false;
-    console.log("false")
   }
 
   renderItems();
