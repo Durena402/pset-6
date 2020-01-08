@@ -88,7 +88,7 @@ const renderItems = function (){
 
           const span4 = document.createElement("span");
           span4.id = i;
-          //span4.className = items[i].priority === "high" ? "remove high" :"remove";
+          span4.className = items[i].priority === "high" ? "remove high" :"remove";
           span4.innerHTML = "&#10008";
           span4.onclick = removeItem;
 
