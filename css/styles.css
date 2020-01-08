@@ -78,9 +78,8 @@ button:hover {
 
 ul {
   border: 3px solid black;
-  background-color: #D9FFF8;
+  background-color: #D9FFF8;;
   width: 90%;
-  /*height: 75px;*/
  list-style: none;
  margin-bottom: 2%;
  margin-top: 2%;
@@ -117,6 +116,7 @@ ul li:hover {
   position: absolute;
   margin: auto;
   right: 25%;
+  cursor: pointer;
 }
 .completed:hover{
  color: green;
@@ -127,6 +127,7 @@ ul li:hover {
   position: absolute;
   margin: auto;
   right: 21%;
+  cursor: pointer;
 }
 .remove:hover{
   color: red;

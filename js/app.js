@@ -15,7 +15,6 @@ window.onload = function() {
      priority: "low",
      complete: false,
      content: text,
-     trash: false
    });
    document.getElementById("textBox").value = "";
 
@@ -41,13 +40,15 @@ window.onload = function() {
 //Delete Function
 
 const removeItem = function() {
-  if (items[this.id].trash === false) {
-      items[this.id].trash = true;
-      items.pop(this.id)
-}
+   items.splice(this.id, 1);
   renderItems();
 }
 
+//Complete function
+
+const completeItem = function() {
+
+}
 const renderItems = function (){
   const ul = document.getElementById("ul");
      ul.innerHTML = "";
@@ -66,15 +67,15 @@ const renderItems = function (){
           const span2 = document.createElement("span");
           span2.id = i;
           span2.className = "item";
-          console.log(items[i]);
-          console.log(items[i].content);
+          //console.log(items[i]);
+          //console.log(items[i].content);
           span2.innerHTML = items[i].content;
 
           const span3 = document.createElement("span");
           span3.id = i;
           span3.className = "completed";
           span3.innerHTML = "&#10004";
-          //span3.onclick = completeItem;
+          span3.onclick = completeItem;
 
           const span4 = document.createElement("span");
           span4.id = i;
