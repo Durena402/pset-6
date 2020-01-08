@@ -49,11 +49,11 @@ const removeItem = function() {
 const completeItem = function() {
   if (items[this.id].complete === false) {
     items[this.id].complete = true;
-let text = document.getElementById("item")
-    text.style.setProperty("text-decoration", "line-through")
-  } else {
-    items[this.id].priority = false;
+    console.log("true")
 
+  } else {
+    items[this.id].complete = false;
+    console.log("false")
   }
 
   renderItems();
@@ -71,24 +71,24 @@ const renderItems = function (){
 
           const span1 = document.createElement("span");
           span1.id = i;
-          span1.className = "priority";
+          span1.className = items[i].priority === "high" ? "priority high" : "priority";
           span1.innerHTML = "!";
           span1.onclick = prioritizeItem;
 
           const span2 = document.createElement("span");
           span2.id = i;
-          span2.className = "item";
+          //span2.className = items[i].complete === true ? "item true" : "item";
           span2.innerHTML = items[i].content;
 
           const span3 = document.createElement("span");
           span3.id = i;
-          span3.className = "completed";
+          //span3.className = items[i].priority === "high" ? "completed high" :"completed";
           span3.innerHTML = "&#10004";
           span3.onclick = completeItem;
 
           const span4 = document.createElement("span");
           span4.id = i;
-          span4.className = "remove";
+          //span4.className = items[i].priority === "high" ? "remove high" :"remove";
           span4.innerHTML = "&#10008";
           span4.onclick = removeItem;
 

@@ -99,6 +99,11 @@ ul li:hover {
 .priority:hover{
   color: blue;
 }
+
+.high {
+  color: red;
+}
+
 .item{
   width: 45%;
   font-size: 40px;
@@ -120,6 +125,10 @@ ul li:hover {
 }
 .completed:hover{
  color: green;
+}
+.true {
+  text-decoration: line-through;
+  color: green;
 }
 .remove {
   width: 5%;
