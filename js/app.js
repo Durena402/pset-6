@@ -47,8 +47,20 @@ const removeItem = function() {
 //Complete function
 
 const completeItem = function() {
+  if (items[this.id].complete === false) {
+    items[this.id].complete = true;
+    //const item = items.splice(this.id, 1);
+    //items.unshift(item[0]);
+  } else {
+    items[this.id].priority = false;
+    //  const item = items.splice(this.id, 1);
+      //items.push(item[0]);
+  }
+
+  renderItems();
 
 }
+//Rendering Items in each list
 const renderItems = function (){
   const ul = document.getElementById("ul");
      ul.innerHTML = "";
@@ -67,8 +79,6 @@ const renderItems = function (){
           const span2 = document.createElement("span");
           span2.id = i;
           span2.className = "item";
-          //console.log(items[i]);
-          //console.log(items[i].content);
           span2.innerHTML = items[i].content;
 
           const span3 = document.createElement("span");
