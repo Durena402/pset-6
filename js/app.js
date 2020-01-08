@@ -77,7 +77,7 @@ const renderItems = function (){
 
           const span2 = document.createElement("span");
           span2.id = i;
-          //span2.className = items[i].complete === true ? "item true" : "item";
+          span2.className = items[i].complete === true ? "item true" : "item";
           span2.innerHTML = items[i].content;
 
           const span3 = document.createElement("span");
