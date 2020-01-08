@@ -1,6 +1,7 @@
 window.onload = function() {
      document.getElementById("add").onclick = addItemToDo;
  };
+ //Puts into Array
  const items = [];
 
   const addItemToDo= function() {
@@ -13,27 +14,39 @@ window.onload = function() {
     items.push({
      priority: "low",
      complete: false,
-     content: text
+     content: text,
+     trash: false
    });
    document.getElementById("textBox").value = "";
 
   renderItems();
  };
 
+//Priotiry Function
+
  const prioritizeItem = function() {
-   // find item in array
    if (items[this.id].priority === "low") {
      items[this.id].priority = "high";
      const item = items.splice(this.id, 1);
      items.unshift(item[0]);
    } else {
      items[this.id].priority = "low";
-     const item = items.splice(this.id, 1);
-     items.push(item);
+       const item = items.splice(this.id, 1);
+       items.push(item[0]);
    }
-  renderItems();
+
+   renderItems();
  }
 
+//Delete Function
+
+const removeItem = function() {
+  if (items[this.id].trash === false) {
+      items[this.id].trash = true;
+      items.pop(this.id)
+}
+  renderItems();
+}
 
 const renderItems = function (){
   const ul = document.getElementById("ul");
@@ -53,19 +66,21 @@ const renderItems = function (){
           const span2 = document.createElement("span");
           span2.id = i;
           span2.className = "item";
+          console.log(items[i]);
+          console.log(items[i].content);
           span2.innerHTML = items[i].content;
 
           const span3 = document.createElement("span");
           span3.id = i;
           span3.className = "completed";
           span3.innerHTML = "&#10004";
-          //span3.onclick = completeItem();
+          //span3.onclick = completeItem;
 
           const span4 = document.createElement("span");
           span4.id = i;
           span4.className = "remove";
           span4.innerHTML = "&#10008";
-          //span4.onclick = removeItem();
+          span4.onclick = removeItem;
 
         div.append(span1);
         div.append(span2);

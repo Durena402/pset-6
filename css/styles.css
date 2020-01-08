@@ -95,6 +95,7 @@ ul li:hover {
   font-size: 50px;
   margin: auto;
   padding: 10px;
+  cursor: pointer;
 }
 .priority:hover{
   color: blue;
