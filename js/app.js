@@ -82,7 +82,7 @@ const renderItems = function (){
 
           const span3 = document.createElement("span");
           span3.id = i;
-          //span3.className = items[i].priority === "high" ? "completed high" :"completed";
+          span3.className = items[i].priority === "high" ? "completed high" :"completed";
           span3.innerHTML = "&#10004";
           span3.onclick = completeItem;
 
